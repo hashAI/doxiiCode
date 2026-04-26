@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <meta name="description" content="Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and more.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        (() => {
+            const savedTheme = localStorage.getItem('apple-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+
+            const metaTheme = document.querySelector('meta[name="theme-color"]');
+            if (metaTheme) {
+                metaTheme.setAttribute('content', theme === 'dark' ? '#1d1d1f' : '#ffffff');
+            }
+        })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#1d1d1f',
+                            lightgray: '#f5f5f7',
+                            blue: '#0071e3',
+                            hover: '#0077ed',
+                            orange: '#bf4800',
+                            link: '#06c'
+                        }
+                    },
+                    fontFamily: {
+                        sf: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'SF Pro Text', 'Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Inter', system-ui, sans-serif;
+            background: #ffffff;
+            overscroll-behavior-y: contain;
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+            color: #1d1d1f;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        ::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+            background: transparent;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Apple-style animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        .scale-in {
+            animation: scaleIn 0.3s ease-out forwards;
+        }
+
+        /* Staggered animation delays */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+
+        /* Apple link hover effect */
+        .apple-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .apple-link:hover {
+            color: #0071e3;
+        }
+
+        /* Apple button styles */
+        .apple-button {
+            background: #0071e3;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            min-width: 120px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .apple-button:hover {
+            background: #0077ed;
+        }
+
+        .apple-button-secondary {
+            background: transparent;
+            border: 1px solid #0071e3;
+            color: #0071e3;
+        }
+
+        .apple-button-secondary:hover {
+            background: #0071e3;
+            color: white;
+        }
+
+        .apple-button-dark {
+            background: #1d1d1f;
+            color: white;
+        }
+
+        .apple-button-dark:hover {
+            background: #333336;
+        }
+
+        .apple-button-light {
+            background: rgba(255, 255, 255, 0.9);
+            color: #1d1d1f;
+            backdrop-filter: blur(20px);
+        }
+
+        .apple-button-light:hover {
+            background: white;
+        }
+
+        /* Apple text link */
+        .apple-text-link {
+            color: #0071e3;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .apple-text-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Card hover effect */
+        .apple-card {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+        }
+
+        .apple-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Horizontal scroll snap */
+        .scroll-snap-x {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .scroll-snap-item {
+            scroll-snap-align: start;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #7c3aed, #2563eb, #10b981, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Product hero gradients */
+        .hero-gradient-light {
+            background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+        }
+
+        .hero-gradient-blue {
+            background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+        }
+
+        /* Modal backdrop blur */
+        .backdrop-blur-heavy {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+        }
+
+        /* Color swatch */
+        .color-swatch {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .color-swatch.active {
+            border-color: #0071e3;
+        }
+
+        .color-swatch::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+        }
+
+        .color-swatch.active::after {
+            border-color: #0071e3;
+        }
+
+        /* Smooth image loading */
+        img {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        img[data-loading="true"] {
+            opacity: 0;
+        }
+
+        /* Typography - SF Pro inspired */
+        .text-display {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .text-headline {
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        .text-body {
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* Carousel indicators */
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            width: 24px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Sticky product nav */
+        .product-sticky-nav {
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Tab underline animation */
+        .tab-underline {
+            position: relative;
+        }
+
+        .tab-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #1d1d1f;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .tab-underline.active::after {
+            transform: scaleX(1);
+        }
+
+        /* Focus styles */
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible {
+            outline: 2px solid #0071e3;
+            outline-offset: 2px;
+        }
+
+        /* Custom selection */
+        ::selection {
+            background: rgba(0, 113, 227, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-white text-apple-gray antialiased">
+    <app-header></app-header>
+    <immersive-menu></immersive-menu>
+    <main id="app" class="min-h-screen"></main>
+    <app-footer></app-footer>
+    <cart-sidebar></cart-sidebar>
+    <search-overlay></search-overlay>
+    <location-selector></location-selector>
+    <favorites-sidebar></favorites-sidebar>
+    <div id="toast-container" class="fixed top-20 right-4 flex flex-col gap-3 z-50"></div>
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

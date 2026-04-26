@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doxii Lit E-Commerce Scaffold</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%233b6dff'/%3E%3Cpath d='M18 38c6 6 22 6 28-10' stroke='white' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='22' r='4' fill='white'/%3E%3C/svg%3E"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CDN (no build) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f5f7ff',
+                100: '#eaefff',
+                200: '#c9d7ff',
+                300: '#a8bfff',
+                400: '#6f95ff',
+                500: '#3b6dff',
+                600: '#1d52f0',
+                700: '#1a44c4',
+                800: '#16389f',
+                900: '#132f82'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Playfair Display', 'Georgia', 'serif']
+            },
+            boxShadow: {
+              card: '0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06)'
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Base styles -->
+    <style>
+      :root { color-scheme: light; }
+      html, body { height: 100%; }
+      body { font-family: Inter, system-ui, sans-serif; }
+      .container { max-width: 1200px; }
+      .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.7); }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <ecom-header></ecom-header>
+    <main id="app" class="min-h-[70vh]"></main>
+    <ecom-footer></ecom-footer>
+    <ecom-cart-drawer></ecom-cart-drawer>
+
+    <!-- Vendor scripts (CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- App bootstrap -->
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+  
+</html>
+
+

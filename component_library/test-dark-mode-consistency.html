@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Consistency Test</title>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .test-header {
+            text-align: center;
+            padding: 20px;
+            background: #2563eb;
+            color: white;
+            margin: 0;
+        }
+        .test-controls {
+            padding: 20px;
+            background: #1e293b;
+            text-align: center;
+            color: white;
+        }
+        .test-button {
+            padding: 12px 24px;
+            background: #4F39F6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.2s;
+        }
+        .test-button:hover {
+            background: #3d2cc5;
+            transform: translateY(-1px);
+        }
+        .test-button:active {
+            transform: translateY(0);
+        }
+        .component-section {
+            margin-bottom: 40px;
+            border-bottom: 4px solid #e2e8f0;
+        }
+        .component-label {
+            background: #f1f5f9;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #334155;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="test-header">
+        🎨 Dark Mode Consistency Test
+    </h1>
+
+    <div class="test-controls">
+        <p style="margin-bottom: 10px; font-size: 18px; font-weight: bold;">✅ Dark Mode Content Consistency Test</p>
+        <p style="margin-bottom: 15px; font-size: 14px; opacity: 0.9;">
+            Verify that ONLY colors change between modes - content, structure, and layout should stay identical
+        </p>
+        <button id="toggle-hero-1" class="test-button">
+            Toggle Hero Gradient Ecommerce (Current: Light)
+        </button>
+        <button id="toggle-hero-2" class="test-button">
+            Toggle Hero Nav Showcase (Current: Light)
+        </button>
+        <button id="toggle-all" class="test-button" style="background: #10b981;">
+            Toggle Both Components
+        </button>
+        <div style="margin-top: 15px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 13px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <strong>✅ What Should Change:</strong> Colors, gradients, shadows<br>
+            <strong>❌ What Should NOT Change:</strong> Titles, images, button text, layout structure, announcement bar presence, navigation buttons
+        </div>
+    </div>
+
+    <div class="component-section">
+        <div class="component-label">1. Hero Gradient Ecommerce</div>
+        <hero-gradient-ecommerce id="hero-1" theme="light"></hero-gradient-ecommerce>
+    </div>
+
+    <div class="component-section">
+        <div class="component-label">2. Hero Nav Showcase</div>
+        <hero-nav-showcase id="hero-2" theme="light"></hero-nav-showcase>
+    </div>
+
+    <!-- Import Components -->
+    <script type="module">
+        import './components/heroes/hero-gradient-ecommerce/hero-gradient-ecommerce.js';
+        import './components/heroes/hero-nav-showcase/hero-nav-showcase.js';
+
+        const hero1 = document.getElementById('hero-1');
+        const hero2 = document.getElementById('hero-2');
+        const toggleBtn1 = document.getElementById('toggle-hero-1');
+        const toggleBtn2 = document.getElementById('toggle-hero-2');
+        const toggleAllBtn = document.getElementById('toggle-all');
+
+        function updateButtonText(button, component, componentName) {
+            const currentTheme = component.getAttribute('theme') || 'light';
+            button.textContent = `Toggle ${componentName} (Current: ${currentTheme === 'light' ? 'Light' : 'Dark'})`;
+        }
+
+        toggleBtn1.addEventListener('click', () => {
+            const currentTheme = hero1.getAttribute('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            hero1.setAttribute('theme', newTheme);
+            updateButtonText(toggleBtn1, hero1, 'Hero Gradient Ecommerce');
+        });
+
+        toggleBtn2.addEventListener('click', () => {
+            const currentTheme = hero2.getAttribute('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            hero2.setAttribute('theme', newTheme);
+            updateButtonText(toggleBtn2, hero2, 'Hero Nav Showcase');
+        });
+
+        toggleAllBtn.addEventListener('click', () => {
+            const currentTheme = hero1.getAttribute('theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            hero1.setAttribute('theme', newTheme);
+            hero2.setAttribute('theme', newTheme);
+            
+            updateButtonText(toggleBtn1, hero1, 'Hero Gradient Ecommerce');
+            updateButtonText(toggleBtn2, hero2, 'Hero Nav Showcase');
+        });
+
+        // Listen for theme changes from components
+        hero1.addEventListener('theme-changed', (e) => {
+            updateButtonText(toggleBtn1, hero1, 'Hero Gradient Ecommerce');
+        });
+
+        hero2.addEventListener('theme-changed', (e) => {
+            updateButtonText(toggleBtn2, hero2, 'Hero Nav Showcase');
+        });
+
+        console.log('✅ Test page loaded successfully');
+        console.log('📝 Instructions:');
+        console.log('1. Click toggle buttons to switch between light and dark modes');
+        console.log('2. Verify that titles, images, and CTA text remain consistent');
+        console.log('3. Only colors and styling should change, not content');
+    </script>
+</body>
+</html>
+

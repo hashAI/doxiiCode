@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero AI Geometric - Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <hero-ai-geometric></hero-ai-geometric>
+
+    <script type="module">
+        import './hero-ai-geometric.js';
+
+        // Test event listeners
+        const component = document.querySelector('hero-ai-geometric');
+
+        component.addEventListener('nav-click', (e) => {
+            console.log('Navigation clicked:', e.detail);
+        });
+
+        component.addEventListener('cta-primary-click', (e) => {
+            console.log('Primary CTA clicked:', e.detail);
+        });
+
+        component.addEventListener('cta-secondary-click', (e) => {
+            console.log('Secondary CTA clicked:', e.detail);
+        });
+
+        component.addEventListener('menu-toggle', (e) => {
+            console.log('Menu toggled:', e.detail);
+        });
+
+        component.addEventListener('theme-changed', (e) => {
+            console.log('Theme changed:', e.detail);
+        });
+    </script>
+</body>
+</html>

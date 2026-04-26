@@ -1,0 +1,149 @@
+{
+  "name": "Hero Nav Showcase",
+  "component": "hero-nav-showcase",
+  "category": "heroes",
+  "description": "Modern hero section with fixed navigation, mobile menu toggle, dual CTAs, and large product showcase image. Perfect for ecommerce landing pages.",
+  "tags": [
+    "hero",
+    "navigation",
+    "mobile-menu",
+    "cta",
+    "landing-page",
+    "ecommerce",
+    "responsive",
+    "dark-mode"
+  ],
+  "features": [
+    "Fixed navigation bar with logo and menu items",
+    "Responsive mobile menu with slide-in animation",
+    "Dual call-to-action buttons (primary and secondary)",
+    "Large hero image with responsive sizing",
+    "Dark and light mode support",
+    "Mobile-first responsive design",
+    "Customizable navigation items via JSON",
+    "Backdrop blur effects",
+    "Smooth transitions and animations",
+    "Full accessibility support",
+    "Custom events for all interactions"
+  ],
+  "props": {
+    "theme": {
+      "type": "string",
+      "default": "light",
+      "description": "Theme mode - 'light' or 'dark'"
+    },
+    "logoText": {
+      "type": "string",
+      "default": "ShopElite",
+      "description": "Logo text to display in navigation"
+    },
+    "logoSvg": {
+      "type": "string",
+      "default": "",
+      "description": "Optional SVG markup for logo icon"
+    },
+    "logoHref": {
+      "type": "string",
+      "default": "/",
+      "description": "URL for logo link"
+    },
+    "navItems": {
+      "type": "string",
+      "default": "[{\"label\":\"Home\",\"href\":\"/\"},{\"label\":\"Shop\",\"href\":\"/shop\"},{\"label\":\"Collections\",\"href\":\"/collections\"},{\"label\":\"About\",\"href\":\"/about\"}]",
+      "description": "JSON string of navigation items with label and href"
+    },
+    "ctaPrimaryText": {
+      "type": "string",
+      "default": "Start Shopping",
+      "description": "Text for primary call-to-action button"
+    },
+    "ctaSecondaryText": {
+      "type": "string",
+      "default": "Watch Demo",
+      "description": "Text for secondary call-to-action button"
+    },
+    "navCtaText": {
+      "type": "string",
+      "default": "Free Trial",
+      "description": "Text for navigation CTA button"
+    },
+    "heading": {
+      "type": "string",
+      "default": "Premium Fashion &<br>Lifestyle Collection",
+      "description": "Main hero heading (supports HTML)"
+    },
+    "subheading": {
+      "type": "string",
+      "default": "Discover curated collections of premium clothing, accessories, and lifestyle products. Shop the latest trends with fast, free shipping.",
+      "description": "Hero subheading text"
+    },
+    "heroImage": {
+      "type": "string",
+      "default": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+      "description": "URL for hero showcase image"
+    },
+    "heroImageAlt": {
+      "type": "string",
+      "default": "Product showcase",
+      "description": "Alt text for hero image"
+    }
+  },
+  "events": {
+    "nav-click": {
+      "description": "Fired when a navigation item is clicked",
+      "detail": {
+        "label": "Navigation item label",
+        "href": "Navigation item URL"
+      }
+    },
+    "cta-primary-click": {
+      "description": "Fired when primary CTA button is clicked",
+      "detail": {
+        "text": "Button text",
+        "type": "primary"
+      }
+    },
+    "cta-secondary-click": {
+      "description": "Fired when secondary CTA button is clicked",
+      "detail": {
+        "text": "Button text",
+        "type": "secondary"
+      }
+    },
+    "nav-cta-click": {
+      "description": "Fired when navigation CTA button is clicked",
+      "detail": {
+        "text": "Button text",
+        "type": "nav-cta"
+      }
+    },
+    "menu-toggle": {
+      "description": "Fired when mobile menu is opened or closed",
+      "detail": {
+        "isOpen": "Boolean indicating if menu is now open"
+      }
+    }
+  },
+  "accessibility": {
+    "ariaLabels": true,
+    "keyboardNavigation": true,
+    "focusManagement": true,
+    "semanticHTML": true,
+    "screenReaderSupport": true
+  },
+  "browser_support": {
+    "chrome": "90+",
+    "firefox": "88+",
+    "safari": "14+",
+    "edge": "90+"
+  },
+  "dependencies": {
+    "lit": "^3.0.0",
+    "tailwindcss": "^3.0.0",
+    "lucide": "latest (CDN)"
+  },
+  "version": "1.0.0",
+  "created": "2025-11-22",
+  "updated": "2025-11-22"
+}
+

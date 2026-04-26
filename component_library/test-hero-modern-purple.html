@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Modern Purple Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .test-controls {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .test-controls button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px 16px;
+            background: #4F46E5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .test-controls button:hover {
+            background: #4338CA;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-controls">
+        <h3 style="margin: 0 0 10px 0; font-size: 14px; font-weight: bold;">Test Controls</h3>
+        <button onclick="switchTheme('light')">Light Theme</button>
+        <button onclick="switchTheme('dark')">Dark Theme</button>
+        <button onclick="testMobileMenu()">Test Mobile Menu</button>
+    </div>
+
+    <div id="component-container">
+        <hero-modern-purple id="test-component" theme="dark"></hero-modern-purple>
+    </div>
+
+    <!-- Import the component -->
+    <script type="module">
+        import './components/heroes/hero-modern-purple/hero-modern-purple.js';
+
+        // Add event listeners to test events
+        document.addEventListener('cta-click', (e) => {
+            console.log('CTA clicked:', e.detail);
+            alert(`CTA clicked: ${e.detail.type}`);
+        });
+
+        document.addEventListener('nav-click', (e) => {
+            console.log('Nav clicked:', e.detail);
+            alert(`Nav clicked: ${e.detail.label} (${e.detail.href})`);
+        });
+
+        document.addEventListener('menu-toggle', (e) => {
+            console.log('Menu toggled:', e.detail);
+        });
+
+        // Make functions global for onclick handlers
+        window.switchTheme = (theme) => {
+            const component = document.getElementById('test-component');
+            component.setAttribute('theme', theme);
+            console.log(`Switched to ${theme} theme`);
+        };
+
+        window.testMobileMenu = () => {
+            alert('Resize your browser window to mobile size (< 768px) or use browser dev tools device emulation to test the mobile menu');
+        };
+    </script>
+</body>
+</html>

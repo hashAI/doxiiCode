@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVault · Premium Electronics Store Template</title>
+    <meta name="description" content="TechVault is a Lit + Tailwind ecommerce template for modern electronics brands.">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        },
+                        blue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'system-ui', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 25px 50px -12px rgba(37,99,235,0.25)'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <style>
+        :root {
+            --header-height: 4.25rem;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #ffffff;
+        }
+
+        .gradient-border {
+            background-image: linear-gradient(120deg, rgba(37,99,235,0.1), rgba(37,99,235,0.15));
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-900 dark:text-white antialiased">
+    <site-header></site-header>
+    <main id="app" class="min-h-screen"></main>
+    <site-footer></site-footer>
+    <cart-drawer></cart-drawer>
+    <location-selector></location-selector>
+    <favorites-sidebar></favorites-sidebar>
+    <div id="toast-container" class="fixed bottom-4 right-4 flex flex-col gap-3 z-50"></div>
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script type="module" src="./assets/app.js?v=1"></script>
+</body>
+</html>

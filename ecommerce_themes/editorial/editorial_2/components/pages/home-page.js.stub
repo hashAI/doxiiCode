@@ -1,0 +1,61 @@
+import { BaseComponent } from '../../components/base-component.js';
+import { productsStore, collectionsMeta, journalEntries, lookbookSlides } from '../../assets/state.js';
+import '../ui/product-card.js';
+
+/**
+ * ⚠️ IMPORTANT: AGENT MUST IMPLEMENT THIS COMPONENT
+ * 
+ * This is a template stub. The agent MUST implement the render() method
+ * to create a custom homepage for the store.
+ * 
+ * Requirements:
+ * - MUST implement render() method that returns a Lit html template
+ * - Should create a unique homepage design matching the store type/brand
+ * - Can include hero sections, product showcases, featured collections, etc.
+ * - Use existing components where helpful (product-card, etc.)
+ * - Follow the store's brand identity (colors, fonts, style)
+ * - Use TailwindCSS utility classes for all styling
+ * - Use this.html`...` for template literals (provided by BaseComponent)
+ * 
+ * Example structure:
+ * - Hero section with brand messaging
+ * - Featured products section
+ * - Collection highlights
+ * - Additional sections as needed (newsletter, journal preview, etc.)
+ * 
+ * The agent should NOT copy from the original theme - this should be
+ * a completely custom implementation for the specific store.
+ */
+class HomePage extends BaseComponent {
+    /**
+     * ⚠️ AGENT MUST IMPLEMENT THIS METHOD
+     * 
+     * Returns a Lit html template for the homepage.
+     * This should be a complete, custom homepage design.
+     */
+    render() {
+        // TODO: Agent must implement this render method
+        // Return a complete homepage design using this.html`...`
+        // Example:
+        // return this.html`
+        //     <section class="space-y-24">
+        //         ${this.heroSection()}
+        //         ${this.featuredProducts()}
+        //         ...
+        //     </section>
+        // `;
+        
+        return this.html`
+            <section class="p-6">
+                <p class="text-red-600 font-bold">
+                    ⚠️ ERROR: render() method not implemented. 
+                    Agent must implement this method to create the homepage.
+                </p>
+            </section>
+        `;
+    }
+}
+
+customElements.define('home-page', HomePage);
+
+

@@ -1,0 +1,2533 @@
+{
+  "version": "1.12.0",
+  "last_updated": "2025-11-29",
+  "description": "DOXII Component Library - Pre-built, tested components for e-commerce stores",
+  "total_components": 36,
+  "components": [
+    {
+      "id": "header-modern-nav",
+      "name": "Header Modern Nav",
+      "category": "headers",
+      "variant": 1,
+      "file_path": "component_library/components/headers/header-modern-nav/header-modern-nav.js",
+      "element_tag": "header-modern-nav",
+      "description": "Modern navigation header with mobile menu, announcement bar, theme toggle, and CTA buttons",
+      "features": [
+        "fixed/sticky navigation",
+        "announcement bar with badge",
+        "mobile hamburger menu with slide animation",
+        "dual CTA buttons (primary and secondary)",
+        "shopping cart icon with item count badge",
+        "theme toggle (light/dark mode)",
+        "backdrop blur effect",
+        "mobile-first responsive design",
+        "Poppins font family",
+        "customizable navigation items via JSON"
+      ],
+      "functionality": [
+        "nav-click event for navigation items",
+        "menu-toggle event with open/close state",
+        "theme-changed event",
+        "cta-click event for action buttons",
+        "mobile menu slide-in animation",
+        "responsive breakpoints",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "e-commerce store headers",
+        "SaaS product websites",
+        "online marketplace navigation",
+        "modern web application headers",
+        "product landing pages",
+        "startup homepages"
+      ],
+      "style_tags": [
+        "modern",
+        "clean",
+        "announcement-bar",
+        "mobile-menu",
+        "dual-cta",
+        "theme-toggle",
+        "cart-badge"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, gradient announcement bar, button styles",
+        "layout": "Fixed navigation, announcement bar position",
+        "typography": "Poppins font family",
+        "content": "Brand name, announcement, navigation items, CTA labels, cart count"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "header",
+        "navigation",
+        "nav",
+        "navbar",
+        "menu",
+        "mobile-menu",
+        "announcement",
+        "cart",
+        "theme-toggle",
+        "responsive",
+        "modern",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/headers/header-modern-nav/preview/preview.js"
+    },
+    {
+      "id": "header-animated-hover",
+      "name": "Header Animated Hover",
+      "category": "headers",
+      "variant": 2,
+      "file_path": "component_library/components/headers/header-animated-hover/header-animated-hover.js",
+      "element_tag": "header-animated-hover",
+      "description": "Navigation header with animated slide-up hover effect on menu items, glassmorphic design",
+      "features": [
+        "unique animated slide-up hover effect on nav links",
+        "glassmorphic rounded pill navigation container",
+        "logo with SVG support",
+        "mobile hamburger menu",
+        "dual CTA buttons with different styles",
+        "theme toggle with glow effect (dark mode)",
+        "mobile-first responsive design",
+        "Poppins font family",
+        "smooth transitions"
+      ],
+      "functionality": [
+        "nav-click event for navigation items",
+        "cta-click event for action buttons",
+        "menu-toggle event",
+        "theme-changed event",
+        "animated hover transitions",
+        "mobile menu overlay",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "creative agency websites",
+        "modern e-commerce stores",
+        "portfolio websites",
+        "tech product launches",
+        "startup landing pages",
+        "design-focused brands"
+      ],
+      "style_tags": [
+        "animated",
+        "hover-effect",
+        "glassmorphic",
+        "creative",
+        "modern",
+        "pill-shaped",
+        "unique"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, glassmorphic effects, glow shadows",
+        "layout": "Rounded pill container, centered navigation",
+        "typography": "Poppins font family",
+        "content": "Logo SVG, brand name, navigation items, CTA labels"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "header",
+        "navigation",
+        "animated",
+        "hover",
+        "creative",
+        "glassmorphic",
+        "modern",
+        "unique",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/headers/header-animated-hover/preview/preview.js"
+    },
+    {
+      "id": "header-search-bar",
+      "name": "Header Search Bar",
+      "category": "headers",
+      "variant": 3,
+      "file_path": "component_library/components/headers/header-search-bar/header-search-bar.js",
+      "element_tag": "header-search-bar",
+      "description": "E-commerce header with prominent search functionality, category dropdown, cart, and wishlist",
+      "features": [
+        "prominent search bar with category dropdown",
+        "product category selector in search",
+        "shopping cart icon with item count badge",
+        "wishlist icon with item count badge",
+        "mobile-responsive search bar",
+        "theme toggle",
+        "mobile menu",
+        "secondary navigation bar",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "search event with query and category",
+        "category-click event",
+        "cart-click event",
+        "wishlist-click event",
+        "nav-click event",
+        "menu-toggle event",
+        "theme-changed event",
+        "form submission handling",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "online retail stores",
+        "large e-commerce platforms",
+        "marketplace websites",
+        "product catalog sites",
+        "multi-category stores",
+        "search-focused shopping sites"
+      ],
+      "style_tags": [
+        "search-focused",
+        "ecommerce",
+        "marketplace",
+        "category-filter",
+        "cart-wishlist",
+        "functional"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, search bar styling, badge colors",
+        "layout": "Two-row layout with search prominence",
+        "typography": "Poppins font family",
+        "content": "Brand name, categories, navigation items, cart/wishlist counts"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "header",
+        "search",
+        "searchbar",
+        "category",
+        "cart",
+        "wishlist",
+        "ecommerce",
+        "marketplace",
+        "navigation"
+      ],
+      "preview_path": "component_library/components/headers/header-search-bar/preview/preview.js"
+    },
+    {
+      "id": "header-mega-menu",
+      "name": "Header Mega Menu",
+      "category": "headers",
+      "variant": 4,
+      "file_path": "component_library/components/headers/header-mega-menu/header-mega-menu.js",
+      "element_tag": "header-mega-menu",
+      "description": "E-commerce header with dropdown mega menu showing categories with images and subcategories",
+      "features": [
+        "mega menu dropdown with category grid",
+        "category images with hover effects",
+        "3-column mega menu layout",
+        "search bar integration",
+        "shopping cart with badge",
+        "mobile menu",
+        "theme toggle",
+        "category organization with images",
+        "smooth transitions",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "mega menu toggle",
+        "category-click event with category data",
+        "nav-click event",
+        "cart-click event",
+        "search event",
+        "menu-toggle event for mobile",
+        "theme-changed event",
+        "hover interactions",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "large e-commerce platforms",
+        "multi-category online stores",
+        "department store websites",
+        "marketplace platforms",
+        "retail chains",
+        "complex product catalogs"
+      ],
+      "style_tags": [
+        "mega-menu",
+        "dropdown",
+        "categories",
+        "images",
+        "organized",
+        "large-scale",
+        "ecommerce"
+      ],
+      "complexity": "high",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, hover effects, shadow",
+        "layout": "3-column grid mega menu, header layout",
+        "typography": "Poppins font family",
+        "content": "Categories with images, subcategories, navigation items"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "header",
+        "mega-menu",
+        "dropdown",
+        "categories",
+        "navigation",
+        "large-scale",
+        "ecommerce",
+        "marketplace"
+      ],
+      "preview_path": "component_library/components/headers/header-mega-menu/preview/preview.js"
+    },
+    {
+      "id": "header-minimal-logo",
+      "name": "Header Minimal Logo",
+      "category": "headers",
+      "variant": 5,
+      "file_path": "component_library/components/headers/header-minimal-logo/header-minimal-logo.js",
+      "element_tag": "header-minimal-logo",
+      "description": "Simple, clean header with logo, minimal navigation, and essential actions",
+      "features": [
+        "minimalist clean design",
+        "logo with initial icon",
+        "simple horizontal navigation",
+        "shopping cart icon with badge",
+        "single CTA button",
+        "theme toggle",
+        "horizontal scroll navigation on mobile",
+        "responsive design",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "nav-click event",
+        "cta-click event",
+        "cart-click event",
+        "theme-changed event",
+        "mobile horizontal scroll navigation",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "minimal e-commerce stores",
+        "boutique shops",
+        "small product catalogs",
+        "lifestyle brands",
+        "artisan stores",
+        "clean design-focused sites"
+      ],
+      "style_tags": [
+        "minimal",
+        "clean",
+        "simple",
+        "modern",
+        "elegant",
+        "boutique"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, logo background, CTA button",
+        "layout": "Centered container, simple horizontal layout",
+        "typography": "Poppins font family",
+        "content": "Brand name/logo, navigation items, CTA label, cart count"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "header",
+        "minimal",
+        "simple",
+        "clean",
+        "navigation",
+        "boutique",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/headers/header-minimal-logo/preview/preview.js"
+    },
+    {
+      "id": "product-detail-elite",
+      "name": "Product Detail Elite",
+      "category": "product-detail",
+      "variant": 6,
+      "file_path": "component_library/components/product-detail/product-detail-elite/product-detail-elite.js",
+      "element_tag": "product-detail-elite",
+      "description": "Elegant product detail page with expandable accordion sections, perfect for furniture and home decor",
+      "features": [
+        "expandable accordion sections",
+        "color swatch selection",
+        "quantity controls",
+        "thumbnail image gallery",
+        "shipping information grid",
+        "breadcrumb navigation",
+        "features and materials sections",
+        "responsive mobile design",
+        "dark/light mode support"
+      ],
+      "functionality": [
+        "product:add-to-cart event",
+        "product:buy-now event",
+        "product:color-change event",
+        "accordion toggle",
+        "quantity increment/decrement",
+        "color and size selection"
+      ],
+      "use_cases": [
+        "furniture ecommerce",
+        "home decor stores",
+        "interior design products",
+        "premium home goods",
+        "luxury furniture brands"
+      ],
+      "style_tags": [
+        "elegant",
+        "accordion",
+        "expandable",
+        "clean",
+        "professional"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, border colors, background colors",
+        "layout": "Two-column responsive grid",
+        "content": "Product data with images, colors, pricing, and shipping info"
+      },
+      "required_imports": [],
+      "dependencies": [],
+      "search_keywords": [
+        "product",
+        "detail",
+        "page",
+        "ecommerce",
+        "furniture",
+        "accordion",
+        "expandable",
+        "shipping",
+        "elegant"
+      ],
+      "preview_path": "component_library/components/product-detail/product-detail-elite/preview/preview.js"
+    },
+    {
+      "id": "product-detail-fashion",
+      "name": "Product Detail Fashion",
+      "category": "product-detail",
+      "variant": 7,
+      "file_path": "component_library/components/product-detail/product-detail-fashion/product-detail-fashion.js",
+      "element_tag": "product-detail-fashion",
+      "description": "Fashion-focused product page with comprehensive reviews, tabs, and rating distribution",
+      "features": [
+        "tabbed interface (Details/Reviews/Discussion)",
+        "comprehensive review system",
+        "rating distribution bars",
+        "color and size selection",
+        "image gallery with thumbnails",
+        "wishlist and share functionality",
+        "responsive design",
+        "dark/light mode support"
+      ],
+      "functionality": [
+        "product:add-to-cart event",
+        "product:buy-item event",
+        "product:wishlist event",
+        "product:share event",
+        "tab switching",
+        "review display and filtering",
+        "rating interactions"
+      ],
+      "use_cases": [
+        "fashion ecommerce",
+        "clothing stores",
+        "apparel brands",
+        "footwear retailers",
+        "fashion accessories"
+      ],
+      "style_tags": [
+        "fashion",
+        "reviews",
+        "tabs",
+        "modern",
+        "social-proof"
+      ],
+      "complexity": "high",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Primary accent, theme colors, star ratings",
+        "layout": "Two-column grid with tabs section",
+        "content": "Product data with reviews and rating distribution"
+      },
+      "required_imports": [],
+      "dependencies": [],
+      "search_keywords": [
+        "product",
+        "detail",
+        "fashion",
+        "reviews",
+        "ratings",
+        "tabs",
+        "clothing",
+        "apparel",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-detail/product-detail-fashion/preview/preview.js"
+    },
+    {
+      "id": "product-detail-sports",
+      "name": "Product Detail Sports",
+      "category": "product-detail",
+      "variant": 8,
+      "file_path": "component_library/components/product-detail/product-detail-sports/product-detail-sports.js",
+      "element_tag": "product-detail-sports",
+      "description": "Image-heavy product page with vertical thumbnail gallery and shipping calculator, ideal for sports and outdoor equipment",
+      "features": [
+        "vertical thumbnail gallery",
+        "image counter and expand icon",
+        "color swatch with gradients",
+        "size selection with availability",
+        "quantity controls with leading zeros",
+        "shipping cost calculator",
+        "country/delivery selection",
+        "total price calculation",
+        "save/wishlist button",
+        "responsive design with mobile optimization",
+        "dark/light mode support"
+      ],
+      "functionality": [
+        "product:add-to-cart event",
+        "product:buy-now event",
+        "product:save event",
+        "vertical image navigation",
+        "quantity management",
+        "shipping calculation",
+        "dynamic pricing"
+      ],
+      "use_cases": [
+        "sports equipment stores",
+        "outdoor gear retailers",
+        "adventure products",
+        "athletic gear",
+        "recreational equipment",
+        "paragliding/extreme sports"
+      ],
+      "style_tags": [
+        "sports",
+        "outdoor",
+        "image-heavy",
+        "vertical-gallery",
+        "calculator"
+      ],
+      "complexity": "high",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Primary blue theme, color swatches with gradients",
+        "layout": "Vertical thumbnail gallery with main image",
+        "content": "Product data with multiple images and shipping options"
+      },
+      "required_imports": [],
+      "dependencies": [],
+      "search_keywords": [
+        "product",
+        "detail",
+        "sports",
+        "outdoor",
+        "gallery",
+        "vertical",
+        "shipping",
+        "calculator",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-detail/product-detail-sports/preview/preview.js"
+    },
+    {
+      "id": "product-detail-minimal",
+      "name": "Product Detail Minimal",
+      "category": "product-detail",
+      "variant": 9,
+      "file_path": "component_library/components/product-detail/product-detail-minimal/product-detail-minimal.js",
+      "element_tag": "product-detail-minimal",
+      "description": "Clean and minimal product page with elegant typography and pill-style selectors, perfect for luxury and watch brands",
+      "features": [
+        "minimal clean design",
+        "pill-style color selectors with dots",
+        "pill-style size buttons",
+        "wishlist heart button",
+        "expandable accordion sections",
+        "material specifications grid",
+        "elegant typography",
+        "rounded corners and soft shadows",
+        "responsive design",
+        "dark/light mode support"
+      ],
+      "functionality": [
+        "product:add-to-cart event",
+        "product:wishlist event",
+        "accordion section toggles",
+        "color and size pill selection",
+        "image gallery navigation"
+      ],
+      "use_cases": [
+        "luxury watch brands",
+        "premium jewelry",
+        "high-end accessories",
+        "designer products",
+        "minimalist brands",
+        "luxury fashion"
+      ],
+      "style_tags": [
+        "minimal",
+        "luxury",
+        "clean",
+        "elegant",
+        "sophisticated",
+        "watch"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Primary accent (rose/coral), neutral grays, elegant palette",
+        "layout": "Two-column grid with generous spacing",
+        "content": "Product data with material specifications"
+      },
+      "required_imports": [],
+      "dependencies": [],
+      "search_keywords": [
+        "product",
+        "detail",
+        "minimal",
+        "luxury",
+        "watch",
+        "clean",
+        "elegant",
+        "sophisticated",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-detail/product-detail-minimal/preview/preview.js"
+    },
+    {
+      "id": "hero-ai-geometric",
+      "name": "Hero AI Geometric",
+      "category": "heroes",
+      "variant": 15,
+      "file_path": "component_library/components/heroes/hero-ai-geometric/hero-ai-geometric.js",
+      "element_tag": "hero-ai-geometric",
+      "description": "Dark hero section with geometric SVG patterns, mobile menu, community badge, and dual CTAs",
+      "features": [
+        "dual theme support (light/dark)",
+        "geometric SVG background patterns",
+        "fixed navigation with backdrop blur",
+        "mobile-responsive hamburger menu",
+        "community badge with user avatars",
+        "dual CTA buttons (primary and secondary)",
+        "smooth animations and transitions",
+        "customizable brand logo with SVG",
+        "Poppins font family",
+        "dark theme with geometric patterns",
+        "mobile-first responsive design",
+        "theme toggle button"
+      ],
+      "functionality": [
+        "nav-click event for navigation",
+        "cta-primary-click event",
+        "cta-secondary-click event",
+        "menu-toggle event with open/close state",
+        "theme-changed event",
+        "mobile menu slide animation",
+        "responsive breakpoints",
+        "hover state interactions",
+        "theme switching (light/dark)",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "tech product landing pages",
+        "AI/ML tool websites",
+        "SaaS product pages",
+        "modern ecommerce homepages",
+        "startup landing pages",
+        "tech brand showcases",
+        "developer tool websites",
+        "smart automation platforms",
+        "productivity tool pages",
+        "analytics dashboard homepages"
+      ],
+      "style_tags": [
+        "dark",
+        "geometric",
+        "hero",
+        "ai",
+        "tech",
+        "modern",
+        "fixed-nav",
+        "mobile-menu",
+        "community-badge",
+        "dual-theme"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Dark background with geometric patterns, theme colors",
+        "layout": "Navigation items, hero content layout, community badge",
+        "typography": "Poppins font family",
+        "content": "Brand name, community stats, hero title, subtitle, CTA text, navigation items, hero images"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "dark",
+        "geometric",
+        "ai",
+        "tech",
+        "ecommerce",
+        "navigation",
+        "mobile-menu",
+        "fixed-nav",
+        "community",
+        "badge",
+        "CTA",
+        "landing-page",
+        "homepage",
+        "responsive",
+        "dual-theme",
+        "light-mode",
+        "dark-mode",
+        "saas",
+        "startup",
+        "modern",
+        "patterns",
+        "svg"
+      ],
+      "preview_path": "component_library/components/heroes/hero-ai-geometric/preview/preview.js"
+    },
+    {
+      "id": "hero-nav-showcase",
+      "name": "Hero Nav Showcase",
+      "category": "heroes",
+      "variant": 16,
+      "file_path": "component_library/components/heroes/hero-nav-showcase/hero-nav-showcase.js",
+      "element_tag": "hero-nav-showcase",
+      "description": "Modern hero section with fixed navigation, mobile menu toggle, dual CTAs, and large product showcase image. Perfect for ecommerce landing pages.",
+      "features": [
+        "fixed navigation bar with logo",
+        "responsive mobile menu with slide-in animation",
+        "dual call-to-action buttons (primary and secondary)",
+        "large hero image with responsive sizing",
+        "dark and light mode support",
+        "mobile-first responsive design",
+        "customizable navigation items via JSON",
+        "backdrop blur effects",
+        "smooth transitions and animations",
+        "full accessibility support",
+        "custom events for all interactions",
+        "Poppins font family",
+        "navigation CTA button in header"
+      ],
+      "functionality": [
+        "nav-click event for navigation items",
+        "cta-primary-click event",
+        "cta-secondary-click event",
+        "nav-cta-click event",
+        "menu-toggle event with open/close state",
+        "mobile menu slide animation from left",
+        "responsive breakpoints",
+        "hover and active state interactions",
+        "Lucide icons auto-initialization",
+        "keyboard navigation support"
+      ],
+      "use_cases": [
+        "ecommerce landing pages",
+        "fashion store homepages",
+        "tech product showcases",
+        "beauty and cosmetics stores",
+        "sports and fitness retailers",
+        "lifestyle brand websites",
+        "online marketplace homepages",
+        "product launch pages",
+        "brand showcase websites",
+        "premium retail stores",
+        "startup product pages"
+      ],
+      "style_tags": [
+        "modern",
+        "hero",
+        "navigation",
+        "fixed-nav",
+        "mobile-menu",
+        "showcase",
+        "landing-page",
+        "dual-cta",
+        "backdrop-blur",
+        "responsive",
+        "clean"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Indigo primary color, slate text colors, theme-based backgrounds",
+        "layout": "Fixed navigation, two-column hero layout (mobile: single column)",
+        "typography": "Poppins font family from Google Fonts",
+        "content": "Logo (text + SVG), navigation items (JSON), CTAs, heading, subheading, hero image"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "navigation",
+        "nav",
+        "fixed",
+        "sticky",
+        "showcase",
+        "landing-page",
+        "homepage",
+        "mobile-menu",
+        "hamburger",
+        "cta",
+        "dual-cta",
+        "backdrop-blur",
+        "responsive",
+        "ecommerce",
+        "fashion",
+        "tech",
+        "beauty",
+        "sports",
+        "modern",
+        "clean",
+        "minimal",
+        "product-showcase",
+        "image-hero",
+        "dark-mode",
+        "light-mode",
+        "dual-theme",
+        "prebuiltui",
+        "indigo",
+        "slate"
+      ],
+      "preview_path": "component_library/components/heroes/hero-nav-showcase/preview/preview.js"
+    },
+    {
+      "id": "hero-grid-gradient-network",
+      "name": "Hero Grid Gradient Network",
+      "category": "heroes",
+      "variant": 17,
+      "file_path": "component_library/components/heroes/hero-grid-gradient-network/hero-grid-gradient-network.js",
+      "element_tag": "hero-grid-gradient-network",
+      "description": "E-commerce hero section with grid pattern gradient background, mobile menu, app download CTAs, and social proof elements",
+      "features": [
+        "dual theme support (light/dark)",
+        "grid pattern with gradient background",
+        "fixed navigation with mobile menu",
+        "app store download buttons (iOS & Android)",
+        "user avatars with star ratings",
+        "social proof indicators",
+        "mobile-first responsive design",
+        "smooth animations and transitions",
+        "Poppins font family",
+        "theme toggle functionality"
+      ],
+      "functionality": [
+        "nav-click event for navigation",
+        "nav-cta-click event",
+        "cta-app-store-click event",
+        "cta-play-store-click event",
+        "menu-toggle event with open/close state",
+        "theme-changed event",
+        "mobile menu with backdrop",
+        "responsive breakpoints",
+        "star rating display",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "online retail homepages",
+        "mobile app download landing pages",
+        "fashion and apparel stores",
+        "electronics retailers",
+        "lifestyle brand websites",
+        "social shopping platforms",
+        "marketplace platforms",
+        "community-driven e-commerce"
+      ],
+      "style_tags": [
+        "modern",
+        "gradient",
+        "grid-pattern",
+        "mobile-app",
+        "social-proof",
+        "rating",
+        "mobile-menu",
+        "dual-theme"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, gradient backgrounds, button styles",
+        "layout": "Navigation items, hero content layout, user avatars",
+        "typography": "Poppins font family",
+        "content": "Brand name, navigation items, title, subtitle, CTA text, user images, rating"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "gradient",
+        "grid",
+        "mobile-app",
+        "download",
+        "app-store",
+        "play-store",
+        "social-proof",
+        "rating",
+        "ecommerce",
+        "network",
+        "community",
+        "mobile-menu",
+        "responsive",
+        "dual-theme",
+        "dark-mode",
+        "light-mode"
+      ],
+      "preview_path": "component_library/components/heroes/hero-grid-gradient-network/preview/preview.js"
+    },
+    {
+      "id": "hero-noise-creator",
+      "name": "Hero Noise Creator",
+      "category": "heroes",
+      "variant": 18,
+      "file_path": "component_library/components/heroes/hero-noise-creator/hero-noise-creator.js",
+      "element_tag": "hero-noise-creator",
+      "description": "E-commerce hero section with noise background texture, centered layout, email signup form, and community badge",
+      "features": [
+        "dual theme support (light/dark)",
+        "noise texture background",
+        "centered content layout",
+        "email signup form with validation",
+        "community badge with user avatars",
+        "Berkshire Swash decorative font for title",
+        "Poppins font for body text",
+        "mobile-first responsive design",
+        "theme toggle functionality",
+        "smooth animations"
+      ],
+      "functionality": [
+        "nav-cta-click event",
+        "email-submit event with email data",
+        "theme-changed event",
+        "form validation",
+        "email input handling",
+        "mobile-friendly navigation",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "SaaS product pages",
+        "email capture landing pages",
+        "early access signup pages",
+        "creator economy platforms",
+        "premium membership sites",
+        "community-driven marketplaces",
+        "subscription e-commerce",
+        "startup product launches"
+      ],
+      "style_tags": [
+        "noise-texture",
+        "centered",
+        "email-form",
+        "community-badge",
+        "decorative-font",
+        "dual-theme",
+        "elegant"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, background texture, button styles",
+        "layout": "Centered content layout, community badge",
+        "typography": "Berkshire Swash for title, Poppins for body",
+        "content": "Brand name, badge text, title, subtitle, announcement, email placeholder"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Google Fonts: Berkshire Swash (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "noise",
+        "texture",
+        "email",
+        "signup",
+        "form",
+        "centered",
+        "community",
+        "badge",
+        "early-access",
+        "saas",
+        "startup",
+        "creator",
+        "dual-theme",
+        "dark-mode",
+        "light-mode"
+      ],
+      "preview_path": "component_library/components/heroes/hero-noise-creator/preview/preview.js"
+    },
+    {
+      "id": "hero-animated-business",
+      "name": "Hero Animated Business",
+      "category": "heroes",
+      "variant": 19,
+      "file_path": "component_library/components/heroes/hero-animated-business/hero-animated-business.js",
+      "element_tag": "hero-animated-business",
+      "description": "E-commerce hero section with animated navigation hover effects, gradient background, dual CTAs, and product image gallery",
+      "features": [
+        "dual theme support (light/dark)",
+        "animated navigation with slide-up hover effect",
+        "gradient background (dark mode with SVG pattern)",
+        "mobile menu with backdrop",
+        "dual CTA buttons (primary and secondary)",
+        "announcement badge with link",
+        "product image gallery with hover effects",
+        "glassmorphic button effects (dark mode)",
+        "mobile-first responsive design",
+        "Poppins font family",
+        "theme toggle functionality"
+      ],
+      "functionality": [
+        "nav-click event for navigation",
+        "cta-primary-click event",
+        "cta-secondary-click event",
+        "menu-toggle event with open/close state",
+        "theme-changed event",
+        "animated hover effects on navigation",
+        "mobile menu with smooth transitions",
+        "responsive breakpoints",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "tech product landing pages",
+        "fashion and lifestyle brands",
+        "modern marketplace platforms",
+        "SaaS product showcases",
+        "digital product stores",
+        "premium brand websites",
+        "startup landing pages",
+        "creative agency portfolios",
+        "product launch pages",
+        "business solution platforms"
+      ],
+      "style_tags": [
+        "animated",
+        "gradient",
+        "glassmorphic",
+        "gallery",
+        "dual-cta",
+        "mobile-menu",
+        "modern",
+        "dual-theme"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, gradient backgrounds, glassmorphic effects",
+        "layout": "Navigation items, hero content, image gallery",
+        "typography": "Poppins font family",
+        "content": "Brand logo, navigation, badge text, title, subtitle, CTA text, product images"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "animated",
+        "navigation",
+        "gradient",
+        "gallery",
+        "glassmorphic",
+        "business",
+        "tech",
+        "fashion",
+        "modern",
+        "dual-cta",
+        "mobile-menu",
+        "responsive",
+        "dual-theme",
+        "dark-mode",
+        "light-mode"
+      ],
+      "preview_path": "component_library/components/heroes/hero-animated-business/preview/preview.js"
+    },
+    {
+      "id": "hero-leaders-industry",
+      "name": "Hero Leaders Industry",
+      "category": "heroes",
+      "variant": 20,
+      "file_path": "component_library/components/heroes/hero-leaders-industry/hero-leaders-industry.js",
+      "element_tag": "hero-leaders-industry",
+      "description": "E-commerce hero section designed for showcasing industry leaders and professionals with product grid layout",
+      "features": [
+        "dual theme support (light/dark)",
+        "gradient background (light: multi-color, dark: gray gradient)",
+        "mobile menu with smooth transitions",
+        "announcement badge with icon",
+        "dual CTA buttons (primary and secondary)",
+        "login and signup buttons in navigation",
+        "product image grid (2x2 layout)",
+        "hover effects on images (scale animation)",
+        "mobile-first responsive design",
+        "Poppins font family",
+        "theme toggle functionality"
+      ],
+      "functionality": [
+        "nav-click event for navigation",
+        "nav-cta-login-click event",
+        "nav-cta-signup-click event",
+        "cta-primary-click event",
+        "cta-secondary-click event",
+        "menu-toggle event with open/close state",
+        "theme-changed event",
+        "mobile menu with body scroll lock",
+        "responsive breakpoints",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "professional marketplace platforms",
+        "industry-specific e-commerce sites",
+        "B2B product showcases",
+        "premium brand websites",
+        "fashion and apparel stores",
+        "tech product platforms",
+        "luxury goods marketplaces",
+        "business solution websites",
+        "corporate e-commerce",
+        "professional service platforms"
+      ],
+      "style_tags": [
+        "professional",
+        "leaders",
+        "industry",
+        "grid-layout",
+        "login",
+        "signup",
+        "gradient",
+        "dual-theme"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, gradient backgrounds, button styles",
+        "layout": "Navigation with login/signup, 2x2 product grid",
+        "typography": "Poppins font family",
+        "content": "Brand logo, navigation, badge, title, subtitle, CTA text, product images"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "leaders",
+        "industry",
+        "professional",
+        "B2B",
+        "login",
+        "signup",
+        "grid",
+        "gradient",
+        "mobile-menu",
+        "responsive",
+        "dual-theme",
+        "dark-mode",
+        "light-mode",
+        "business"
+      ],
+      "preview_path": "component_library/components/heroes/hero-leaders-industry/preview/preview.js"
+    },
+    {
+      "id": "hero-centered-leaders",
+      "name": "Hero Centered Leaders",
+      "category": "heroes",
+      "variant": 21,
+      "file_path": "component_library/components/heroes/hero-centered-leaders/hero-centered-leaders.js",
+      "element_tag": "hero-centered-leaders",
+      "description": "E-commerce hero section with centered content layout and horizontal scrolling image gallery",
+      "features": [
+        "dual theme support (light/dark)",
+        "gradient background (light: multi-tone, dark: gray gradient)",
+        "centered content layout",
+        "mobile menu with smooth transitions",
+        "announcement badge with icon",
+        "single centered CTA button",
+        "login and signup buttons in navigation",
+        "horizontal scrolling image gallery (5 images)",
+        "hover effects on images (translate animation)",
+        "mobile-first responsive design",
+        "Poppins font family",
+        "theme toggle functionality"
+      ],
+      "functionality": [
+        "nav-click event for navigation",
+        "nav-cta-login-click event",
+        "nav-cta-signup-click event",
+        "cta-primary-click event",
+        "menu-toggle event with open/close state",
+        "theme-changed event",
+        "mobile menu with body scroll lock",
+        "horizontal scroll for images",
+        "responsive breakpoints",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "product landing pages",
+        "brand showcase websites",
+        "fashion and lifestyle stores",
+        "creative marketplaces",
+        "professional portfolios with products",
+        "modern e-commerce homepages",
+        "digital product stores",
+        "curated collections",
+        "premium brand sites",
+        "SaaS product pages",
+        "subscription services"
+      ],
+      "style_tags": [
+        "centered",
+        "leaders",
+        "horizontal-gallery",
+        "login",
+        "signup",
+        "gradient",
+        "dual-theme",
+        "minimal"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, gradient backgrounds, button styles",
+        "layout": "Centered content, horizontal scrolling gallery",
+        "typography": "Poppins font family",
+        "content": "Brand logo, navigation, badge, title, subtitle, CTA text, product images"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "hero",
+        "centered",
+        "leaders",
+        "horizontal",
+        "gallery",
+        "login",
+        "signup",
+        "gradient",
+        "mobile-menu",
+        "responsive",
+        "dual-theme",
+        "dark-mode",
+        "light-mode",
+        "minimal",
+        "clean"
+      ],
+      "preview_path": "component_library/components/heroes/hero-centered-leaders/preview/preview.js"
+    },
+    {
+      "id": "gallery-hover-expand",
+      "name": "Gallery Hover Expand",
+      "category": "product-gallery",
+      "variant": 1,
+      "file_path": "component_library/components/product-gallery/gallery-hover-expand/gallery-hover-expand.js",
+      "element_tag": "gallery-hover-expand",
+      "description": "Elegant product image gallery with horizontal expand-on-hover effect, perfect for showcasing collections",
+      "features": [
+        "smooth expand animation on hover",
+        "mobile responsive design",
+        "dark mode support",
+        "customizable images and text",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "Poppins font family",
+        "6 image default layout"
+      ],
+      "functionality": [
+        "image-click event with index and URL",
+        "hover expand interaction",
+        "keyboard navigation support",
+        "click to view/navigate"
+      ],
+      "use_cases": [
+        "product collection showcases",
+        "category browsing",
+        "featured items display",
+        "brand storytelling",
+        "seasonal collections",
+        "new arrivals section"
+      ],
+      "style_tags": [
+        "hover-expand",
+        "gallery",
+        "interactive",
+        "modern",
+        "elegant"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors for light and dark modes",
+        "layout": "Horizontal gallery with expand effect",
+        "typography": "Poppins font family",
+        "content": "Images array, title, subtitle"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "gallery",
+        "hover",
+        "expand",
+        "interactive",
+        "product",
+        "showcase",
+        "collection",
+        "images",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-hover-expand/preview/preview.js"
+    },
+    {
+      "id": "gallery-hover-simple",
+      "name": "Gallery Hover Simple",
+      "category": "product-gallery",
+      "variant": 2,
+      "file_path": "component_library/components/product-gallery/gallery-hover-simple/gallery-hover-simple.js",
+      "element_tag": "gallery-hover-simple",
+      "description": "Simple product image gallery with translate-up hover effect, perfect for clean product showcases",
+      "features": [
+        "simple translate-up hover effect",
+        "mobile responsive design",
+        "dark mode support",
+        "customizable images and text",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "Poppins font family",
+        "4 image default layout"
+      ],
+      "functionality": [
+        "image-click event with index and URL",
+        "hover translate animation",
+        "keyboard navigation support",
+        "click to view/navigate"
+      ],
+      "use_cases": [
+        "product category displays",
+        "featured products section",
+        "best sellers showcase",
+        "sale items display",
+        "brand collections",
+        "minimalist product grids"
+      ],
+      "style_tags": [
+        "simple",
+        "hover",
+        "gallery",
+        "clean",
+        "minimal"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors for light and dark modes",
+        "layout": "Flexible wrap gallery",
+        "typography": "Poppins font family",
+        "content": "Images array, title, subtitle"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "gallery",
+        "simple",
+        "hover",
+        "product",
+        "showcase",
+        "minimal",
+        "clean",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-hover-simple/preview/preview.js"
+    },
+    {
+      "id": "gallery-hover-content",
+      "name": "Gallery Hover Content",
+      "category": "product-gallery",
+      "variant": 3,
+      "file_path": "component_library/components/product-gallery/gallery-hover-content/gallery-hover-content.js",
+      "element_tag": "gallery-hover-content",
+      "description": "Product image gallery with text overlay revealed on hover, perfect for category showcases",
+      "features": [
+        "content overlay on hover",
+        "title and description display",
+        "expand on hover (desktop)",
+        "mobile responsive design",
+        "dark mode support",
+        "customizable items",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "Poppins font family",
+        "3 item default layout"
+      ],
+      "functionality": [
+        "item-click event with index and item data",
+        "hover overlay reveal",
+        "keyboard navigation support",
+        "click to navigate"
+      ],
+      "use_cases": [
+        "category navigation",
+        "collection showcases",
+        "brand story sections",
+        "featured departments",
+        "seasonal categories",
+        "promotional sections"
+      ],
+      "style_tags": [
+        "overlay",
+        "hover",
+        "gallery",
+        "content",
+        "category"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors, overlay backgrounds",
+        "layout": "Horizontal gallery with expand",
+        "typography": "Poppins font family",
+        "content": "Items array (url, title, description), gallery title, subtitle"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "gallery",
+        "hover",
+        "overlay",
+        "content",
+        "category",
+        "showcase",
+        "product",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-hover-content/preview/preview.js"
+    },
+    {
+      "id": "gallery-slider-indicators",
+      "name": "Gallery Slider Indicators",
+      "category": "product-gallery",
+      "variant": 4,
+      "file_path": "component_library/components/product-gallery/gallery-slider-indicators/gallery-slider-indicators.js",
+      "element_tag": "gallery-slider-indicators",
+      "description": "Auto-sliding product image gallery with dot indicators, perfect for hero sections",
+      "features": [
+        "auto-slide functionality",
+        "dot indicator navigation",
+        "smooth CSS transitions",
+        "mobile responsive design",
+        "dark mode support",
+        "customizable slide interval",
+        "pause on interaction",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "5 image default layout"
+      ],
+      "functionality": [
+        "slide-change event with index and URL",
+        "indicator-click event with index",
+        "auto-slide with configurable interval",
+        "manual slide navigation",
+        "auto-slide reset on interaction"
+      ],
+      "use_cases": [
+        "hero sections",
+        "featured products carousel",
+        "promotional banners",
+        "product launch showcases",
+        "seasonal campaigns",
+        "flash sale highlights"
+      ],
+      "style_tags": [
+        "slider",
+        "carousel",
+        "auto-slide",
+        "indicators",
+        "hero"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors, indicator states",
+        "layout": "Full-width slider container",
+        "timing": "Configurable auto-slide interval",
+        "content": "Images array, autoSlideInterval, autoSlide boolean"
+      },
+      "required_imports": [
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "slider",
+        "carousel",
+        "auto-slide",
+        "indicators",
+        "dots",
+        "gallery",
+        "hero",
+        "product",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-slider-indicators/preview/preview.js"
+    },
+    {
+      "id": "gallery-slider-buttons",
+      "name": "Gallery Slider Buttons",
+      "category": "product-gallery",
+      "variant": 5,
+      "file_path": "component_library/components/product-gallery/gallery-slider-buttons/gallery-slider-buttons.js",
+      "element_tag": "gallery-slider-buttons",
+      "description": "Auto-sliding product image gallery with navigation buttons, provides manual control",
+      "features": [
+        "auto-slide functionality",
+        "previous/next buttons",
+        "smooth CSS transitions",
+        "mobile responsive buttons",
+        "dark mode support",
+        "customizable slide interval",
+        "reset on button click",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "5 image default layout",
+        "responsive button sizing"
+      ],
+      "functionality": [
+        "slide-change event with index and URL",
+        "button-click event with direction and index",
+        "auto-slide with configurable interval",
+        "manual navigation with buttons",
+        "auto-slide reset on interaction",
+        "window resize handling"
+      ],
+      "use_cases": [
+        "hero sections with manual control",
+        "product image carousels",
+        "featured collections",
+        "brand story slideshows",
+        "promotional banners",
+        "product detail galleries"
+      ],
+      "style_tags": [
+        "slider",
+        "carousel",
+        "buttons",
+        "navigation",
+        "auto-slide"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors, button backgrounds",
+        "layout": "Full-width slider with side buttons",
+        "timing": "Configurable auto-slide interval",
+        "content": "Images array, autoSlideInterval, autoSlide boolean"
+      },
+      "required_imports": [
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "slider",
+        "carousel",
+        "buttons",
+        "navigation",
+        "auto-slide",
+        "gallery",
+        "product",
+        "ecommerce",
+        "hero"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-slider-buttons/preview/preview.js"
+    },
+    {
+      "id": "gallery-grid",
+      "name": "Gallery Grid",
+      "category": "product-gallery",
+      "variant": 6,
+      "file_path": "component_library/components/product-gallery/gallery-grid/gallery-grid.js",
+      "element_tag": "gallery-grid",
+      "description": "Responsive grid-based product image gallery with hover overlay, perfect for product catalogs",
+      "features": [
+        "responsive grid layout",
+        "hover overlay with title and link",
+        "SVG icon integration",
+        "mobile responsive (1-4 columns)",
+        "dark mode support",
+        "customizable items",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "Poppins font family",
+        "8 item default layout"
+      ],
+      "functionality": [
+        "item-click event with index and item",
+        "link-click event for 'Show More'",
+        "hover overlay reveal",
+        "keyboard navigation support",
+        "separate link click handling"
+      ],
+      "use_cases": [
+        "product catalog pages",
+        "category listings",
+        "new arrivals grid",
+        "best sellers showcase",
+        "sale items display",
+        "search results",
+        "collection browsing",
+        "portfolio showcases"
+      ],
+      "style_tags": [
+        "grid",
+        "gallery",
+        "catalog",
+        "overlay",
+        "responsive"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors, overlay backgrounds",
+        "layout": "Responsive grid (1-4 columns)",
+        "typography": "Poppins font family",
+        "content": "Items array (url, title, link), gallery title, subtitle"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "grid",
+        "gallery",
+        "catalog",
+        "product",
+        "listing",
+        "overlay",
+        "hover",
+        "responsive",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-grid/preview/preview.js"
+    },
+    {
+      "id": "gallery-marquee-testimonials",
+      "name": "Gallery Marquee Testimonials",
+      "category": "product-gallery",
+      "variant": 7,
+      "file_path": "component_library/components/product-gallery/gallery-marquee-testimonials/gallery-marquee-testimonials.js",
+      "element_tag": "gallery-marquee-testimonials",
+      "description": "Infinite scrolling marquee displaying customer testimonials in two rows with opposite scroll directions",
+      "features": [
+        "infinite scroll animation",
+        "two-row layout (opposite directions)",
+        "pause on hover (configurable)",
+        "verified customer badges",
+        "social media integration (Twitter/X)",
+        "mobile responsive design",
+        "dark mode support",
+        "customizable animation speed",
+        "gradient edge fades",
+        "keyboard navigation",
+        "ARIA accessibility",
+        "GPU-accelerated animation",
+        "5 testimonial default layout"
+      ],
+      "functionality": [
+        "card-click event with index and card data",
+        "link-click event with platform info",
+        "seamless infinite loop",
+        "hover pause interaction",
+        "click-through to social profiles",
+        "keyboard navigation support"
+      ],
+      "use_cases": [
+        "customer testimonials sections",
+        "social proof displays",
+        "review showcases",
+        "trust indicators",
+        "homepage testimonials",
+        "product review highlights",
+        "category-specific reviews",
+        "checkout trust signals"
+      ],
+      "style_tags": [
+        "marquee",
+        "infinite-scroll",
+        "testimonials",
+        "reviews",
+        "social-proof",
+        "animated"
+      ],
+      "complexity": "medium",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based colors, card backgrounds, borders",
+        "layout": "Two-row marquee with opposite scroll directions",
+        "timing": "Configurable animation duration (default: 25s)",
+        "content": "Cards array (image, name, handle, date, testimonial), animationDuration, pauseOnHover"
+      },
+      "required_imports": [
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "marquee",
+        "testimonials",
+        "reviews",
+        "infinite-scroll",
+        "social-proof",
+        "customers",
+        "feedback",
+        "ratings",
+        "carousel",
+        "animated",
+        "twitter",
+        "verified",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/product-gallery/gallery-marquee-testimonials/preview/preview.js"
+    },
+    {
+      "id": "newsletter-gradient-purple",
+      "name": "Newsletter Gradient Purple",
+      "category": "newsletters",
+      "variant": 1,
+      "file_path": "component_library/components/newsletters/newsletter-gradient-purple/newsletter-gradient-purple.js",
+      "element_tag": "newsletter-gradient-purple",
+      "description": "E-commerce newsletter section with purple gradient background, star ratings, and trust indicators",
+      "features": [
+        "gradient background (purple theme)",
+        "star rating display",
+        "trust badge with review count",
+        "email signup form",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "email-submit event with email data",
+        "form validation",
+        "email input handling"
+      ],
+      "use_cases": [
+        "newsletter signup sections",
+        "email capture pages",
+        "subscription forms",
+        "homepage newsletter",
+        "footer newsletter",
+        "popup newsletter forms"
+      ],
+      "style_tags": [
+        "gradient",
+        "purple",
+        "ratings",
+        "trust-badge",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Gradient colors, theme-based backgrounds",
+        "layout": "Horizontal layout (mobile: vertical)",
+        "typography": "Poppins font family",
+        "content": "Trust badge, title, subtitle, star ratings, email placeholder"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "newsletter",
+        "email",
+        "signup",
+        "subscription",
+        "gradient",
+        "purple",
+        "ratings",
+        "trust",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/newsletters/newsletter-gradient-purple/preview/preview.js"
+    },
+    {
+      "id": "newsletter-modal-simple",
+      "name": "Newsletter Modal Simple",
+      "category": "newsletters",
+      "variant": 2,
+      "file_path": "component_library/components/newsletters/newsletter-modal-simple/newsletter-modal-simple.js",
+      "element_tag": "newsletter-modal-simple",
+      "description": "E-commerce newsletter modal with image display and close button",
+      "features": [
+        "modal layout with image",
+        "close button",
+        "email signup form",
+        "responsive design",
+        "dark/light mode support"
+      ],
+      "functionality": [
+        "email-submit event with email data",
+        "modal-close event",
+        "form validation"
+      ],
+      "use_cases": [
+        "popup newsletter forms",
+        "modal subscriptions",
+        "welcome popups",
+        "exit-intent forms",
+        "promotional signups"
+      ],
+      "style_tags": [
+        "modal",
+        "simple",
+        "clean",
+        "image-display"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme-based backgrounds",
+        "layout": "Two-column grid (mobile: single column)",
+        "content": "Image, title, subtitle, email placeholder"
+      },
+      "required_imports": [
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "newsletter",
+        "modal",
+        "popup",
+        "email",
+        "signup",
+        "subscription",
+        "simple",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/newsletters/newsletter-modal-simple/preview/preview.js"
+    },
+    {
+      "id": "newsletter-dark-simple",
+      "name": "Newsletter Dark Simple",
+      "category": "newsletters",
+      "variant": 3,
+      "file_path": "component_library/components/newsletters/newsletter-dark-simple/newsletter-dark-simple.js",
+      "element_tag": "newsletter-dark-simple",
+      "description": "E-commerce newsletter section with centered dark layout and badge",
+      "features": [
+        "centered layout",
+        "badge display",
+        "email signup form",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "email-submit event with email data",
+        "form validation",
+        "email input handling"
+      ],
+      "use_cases": [
+        "newsletter sections",
+        "email capture",
+        "subscription forms",
+        "dark-themed pages",
+        "centered CTAs"
+      ],
+      "style_tags": [
+        "dark",
+        "centered",
+        "simple",
+        "badge",
+        "minimal"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Dark theme colors, badge colors",
+        "layout": "Centered content layout",
+        "typography": "Poppins font family",
+        "content": "Badge, title, subtitle, email placeholder"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "newsletter",
+        "dark",
+        "centered",
+        "email",
+        "signup",
+        "subscription",
+        "simple",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/newsletters/newsletter-dark-simple/preview/preview.js"
+    },
+    {
+      "id": "newsletter-card-email",
+      "name": "Newsletter Card Email",
+      "category": "newsletters",
+      "variant": 4,
+      "file_path": "component_library/components/newsletters/newsletter-card-email/newsletter-card-email.js",
+      "element_tag": "newsletter-card-email",
+      "description": "E-commerce newsletter card with icon, email signup, and sign-in link",
+      "features": [
+        "card layout with shadow",
+        "icon display",
+        "email signup form",
+        "sign-in link",
+        "responsive design",
+        "dark/light mode support"
+      ],
+      "functionality": [
+        "email-submit event with email data",
+        "sign-in-click event",
+        "form validation"
+      ],
+      "use_cases": [
+        "newsletter cards",
+        "subscription forms",
+        "email capture",
+        "member signups",
+        "content gates"
+      ],
+      "style_tags": [
+        "card",
+        "icon",
+        "simple",
+        "clean",
+        "minimal"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, card shadows",
+        "layout": "Centered card layout",
+        "content": "Icon, title, subtitle, email placeholder, sign-in text"
+      },
+      "required_imports": [
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "newsletter",
+        "card",
+        "email",
+        "signup",
+        "subscription",
+        "icon",
+        "signin",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/newsletters/newsletter-card-email/preview/preview.js"
+    },
+    {
+      "id": "newsletter-hero-cta",
+      "name": "Newsletter Hero CTA",
+      "category": "newsletters",
+      "variant": 5,
+      "file_path": "component_library/components/newsletters/newsletter-hero-cta/newsletter-hero-cta.js",
+      "element_tag": "newsletter-hero-cta",
+      "description": "E-commerce newsletter hero section with badge, large title, and email CTA",
+      "features": [
+        "hero-style layout",
+        "badge with icon",
+        "large title typography",
+        "email signup form with icon",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family",
+        "Lucide icons"
+      ],
+      "functionality": [
+        "email-submit event with email data",
+        "form validation",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "hero newsletter sections",
+        "landing page signups",
+        "homepage CTAs",
+        "email capture pages",
+        "subscription landing pages"
+      ],
+      "style_tags": [
+        "hero",
+        "cta",
+        "badge",
+        "large-title",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, badge colors, gradient buttons",
+        "layout": "Centered hero layout",
+        "typography": "Poppins font family, large heading",
+        "content": "Badge, title, subtitle, email placeholder"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "newsletter",
+        "hero",
+        "cta",
+        "email",
+        "signup",
+        "subscription",
+        "badge",
+        "landing-page",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/newsletters/newsletter-hero-cta/preview/preview.js"
+    },
+    {
+      "id": "features-card-grid",
+      "name": "Features Card Grid",
+      "category": "features",
+      "variant": 1,
+      "file_path": "component_library/components/features/features-card-grid/features-card-grid.js",
+      "element_tag": "features-card-grid",
+      "description": "E-commerce features section with three-column card grid layout",
+      "features": [
+        "three-column grid layout",
+        "feature images",
+        "hover animations",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "feature-click event with index and feature data",
+        "hover effects"
+      ],
+      "use_cases": [
+        "feature showcases",
+        "service displays",
+        "benefits sections",
+        "product features",
+        "about sections"
+      ],
+      "style_tags": [
+        "grid",
+        "cards",
+        "features",
+        "images",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors",
+        "layout": "Three-column grid (mobile: single column)",
+        "typography": "Poppins font family",
+        "content": "Features array (image, title, description)"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "features",
+        "grid",
+        "cards",
+        "showcase",
+        "benefits",
+        "services",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/features/features-card-grid/preview/preview.js"
+    },
+    {
+      "id": "features-split-image",
+      "name": "Features Split Image",
+      "category": "features",
+      "variant": 2,
+      "file_path": "component_library/components/features/features-split-image/features-split-image.js",
+      "element_tag": "features-split-image",
+      "description": "E-commerce features section with split image and content layout",
+      "features": [
+        "split layout (image left, content right)",
+        "multiple images",
+        "learn more link with icon",
+        "gradient blur effect",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family",
+        "Lucide icons"
+      ],
+      "functionality": [
+        "learn-more-click event",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "feature showcases",
+        "product highlights",
+        "about sections",
+        "benefits displays",
+        "service descriptions"
+      ],
+      "style_tags": [
+        "split",
+        "image",
+        "features",
+        "modern",
+        "gradient"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Theme colors, gradient blur",
+        "layout": "Split layout (mobile: vertical stack)",
+        "typography": "Poppins font family",
+        "content": "Intro, images, feature title, description, link"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "features",
+        "split",
+        "image",
+        "showcase",
+        "benefits",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/features/features-split-image/preview/preview.js"
+    },
+    {
+      "id": "features-trusted-brands",
+      "name": "Features Trusted Brands",
+      "category": "features",
+      "variant": 3,
+      "file_path": "component_library/components/features/features-trusted-brands/features-trusted-brands.js",
+      "element_tag": "features-trusted-brands",
+      "description": "E-commerce features section showcasing trusted brand images",
+      "features": [
+        "brand image display",
+        "hover animations",
+        "gradient title",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "brand-click event with index and brand data",
+        "hover effects"
+      ],
+      "use_cases": [
+        "trusted brands sections",
+        "partner showcases",
+        "client logos",
+        "social proof",
+        "brand partnerships"
+      ],
+      "style_tags": [
+        "brands",
+        "logos",
+        "trusted",
+        "social-proof",
+        "gradient"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Gradient title colors, theme colors",
+        "layout": "Flexible brand display",
+        "typography": "Poppins font family",
+        "content": "Title, subtitle, brands array (image, name, url)"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "features",
+        "brands",
+        "trusted",
+        "partners",
+        "logos",
+        "social-proof",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/features/features-trusted-brands/preview/preview.js"
+    },
+    {
+      "id": "features-icon-list",
+      "name": "Features Icon List",
+      "category": "features",
+      "variant": 4,
+      "file_path": "component_library/components/features/features-icon-list/features-icon-list.js",
+      "element_tag": "features-icon-list",
+      "description": "E-commerce features section with image and icon list layout",
+      "features": [
+        "image on left, icon list on right",
+        "colored icon backgrounds",
+        "hover animations",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "feature-click event with index and feature data",
+        "hover scale effects"
+      ],
+      "use_cases": [
+        "feature lists",
+        "benefits displays",
+        "service showcases",
+        "product features",
+        "about sections"
+      ],
+      "style_tags": [
+        "icons",
+        "list",
+        "features",
+        "split-layout",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Icon background colors, theme colors",
+        "layout": "Split layout (mobile: vertical stack)",
+        "typography": "Poppins font family",
+        "content": "Image, features array (icon, title, description, bgColor)"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "features",
+        "icons",
+        "list",
+        "showcase",
+        "benefits",
+        "services",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/features/features-icon-list/preview/preview.js"
+    },
+    {
+      "id": "about-grid-features",
+      "name": "About Grid Features",
+      "category": "about",
+      "variant": 1,
+      "file_path": "component_library/components/about/about-grid-features/about-grid-features.js",
+      "element_tag": "about-grid-features",
+      "description": "E-commerce about section with three-column grid feature layout",
+      "features": [
+        "three-column grid layout",
+        "feature icons",
+        "gradient blur background",
+        "hover animations",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "feature-click event with index and feature data",
+        "hover scale effects"
+      ],
+      "use_cases": [
+        "about sections",
+        "company features",
+        "platform benefits",
+        "service highlights",
+        "value propositions"
+      ],
+      "style_tags": [
+        "grid",
+        "about",
+        "features",
+        "icons",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Icon backgrounds, gradient blur, theme colors",
+        "layout": "Three-column grid (mobile: single column)",
+        "typography": "Poppins font family",
+        "content": "Title, subtitle, features array (icon, title, description)"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "about",
+        "grid",
+        "features",
+        "icons",
+        "company",
+        "platform",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/about/about-grid-features/preview/preview.js"
+    },
+    {
+      "id": "about-split-features",
+      "name": "About Split Features",
+      "category": "about",
+      "variant": 2,
+      "file_path": "component_library/components/about/about-split-features/about-split-features.js",
+      "element_tag": "about-split-features",
+      "description": "E-commerce about section with split image and feature list layout",
+      "features": [
+        "split layout (image left, features right)",
+        "feature icons",
+        "gradient blur background",
+        "hover animations",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family"
+      ],
+      "functionality": [
+        "feature-click event with index and feature data",
+        "hover scale effects"
+      ],
+      "use_cases": [
+        "about sections",
+        "company overview",
+        "platform features",
+        "service highlights",
+        "value propositions"
+      ],
+      "style_tags": [
+        "split",
+        "about",
+        "features",
+        "icons",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Icon backgrounds, gradient blur, theme colors",
+        "layout": "Split layout (mobile: vertical stack)",
+        "typography": "Poppins font family",
+        "content": "Title, subtitle, image, features array (icon, title, description)"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "about",
+        "split",
+        "features",
+        "icons",
+        "company",
+        "platform",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/about/about-split-features/preview/preview.js"
+    },
+    {
+      "id": "about-video-content",
+      "name": "About Video Content",
+      "category": "about",
+      "variant": 3,
+      "file_path": "component_library/components/about/about-video-content/about-video-content.js",
+      "element_tag": "about-video-content",
+      "description": "E-commerce about section with video thumbnail, play button, and content",
+      "features": [
+        "video thumbnail with play button",
+        "content paragraphs",
+        "CTA button with arrow",
+        "shadow effects",
+        "responsive design",
+        "dark/light mode support",
+        "Poppins font family",
+        "Lucide icons"
+      ],
+      "functionality": [
+        "video-play event",
+        "read-more-click event",
+        "Lucide icons auto-initialization"
+      ],
+      "use_cases": [
+        "about sections",
+        "company story",
+        "video showcases",
+        "brand narrative",
+        "platform overview"
+      ],
+      "style_tags": [
+        "video",
+        "about",
+        "content",
+        "cta",
+        "modern"
+      ],
+      "complexity": "low",
+      "mobile_friendly": true,
+      "dark_mode_support": true,
+      "customization_points": {
+        "colors": "Shadow colors, gradient button, theme colors",
+        "layout": "Split layout (mobile: vertical stack)",
+        "typography": "Poppins font family",
+        "content": "Badge, video thumbnail, content paragraphs, button text"
+      },
+      "required_imports": [
+        "Google Fonts: Poppins (auto-loaded from CDN)",
+        "Lucide Icons (auto-loaded from CDN)",
+        "TailwindCSS (via CDN)"
+      ],
+      "dependencies": [],
+      "search_keywords": [
+        "about",
+        "video",
+        "content",
+        "story",
+        "company",
+        "platform",
+        "cta",
+        "ecommerce"
+      ],
+      "preview_path": "component_library/components/about/about-video-content/preview/preview.js"
+    }
+  ],
+  "categories": {
+    "headers": {
+      "count": 5,
+      "description": "Navigation header components with mobile menus, search bars, mega menus, and various styles - all fully responsive with light/dark mode support"
+    },
+    "heroes": {
+      "count": 8,
+      "description": "Hero section components for landing pages and homepages"
+    },
+    "product-detail": {
+      "count": 4,
+      "description": "Product detail page variants for different industries"
+    },
+    "product-gallery": {
+      "count": 7,
+      "description": "Product image gallery and slider components for showcasing collections"
+    },
+    "newsletters": {
+      "count": 5,
+      "description": "Newsletter signup and email capture components for ecommerce stores"
+    },
+    "features": {
+      "count": 4,
+      "description": "Feature showcase components highlighting product benefits and platform capabilities"
+    },
+    "about": {
+      "count": 3,
+      "description": "About section components for company overview and brand storytelling"
+    }
+  }
+}

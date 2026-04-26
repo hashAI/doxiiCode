@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern E-commerce Store - Quality Products, Great Prices">
+    <title>Myntra - Fashion Shopping App</title>
+
+    <!-- Tailwind CSS with Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef1f7',
+                            100: '#fee5f0',
+                            200: '#fecde3',
+                            300: '#ffa3cb',
+                            400: '#fe6ba9',
+                            500: '#f83f87',
+                            600: '#e91e63',
+                            700: '#c2185b',
+                            800: '#ad1457',
+                            900: '#880e4f'
+                        },
+                        accent: {
+                            500: '#ff3e6c',
+                            600: '#ff2f5e',
+                            700: '#e91e63'
+                        },
+                        myntra: {
+                            pink: '#ff3e6c',
+                            purple: '#7c4dff',
+                            darkPurple: '#5e35b1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.2s ease-out',
+                        'slide-down': 'slideDown 0.2s ease-out',
+                        'slide-in-right': 'slideInRight 0.25s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-10px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* CSS Variables for Theme System */
+        :root {
+            --header-height: 64px;
+            --max-width: 1280px;
+            --border-radius: 8px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dark Mode Variables */
+        .dark {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --border-color: #334155;
+        }
+
+        /* Light Mode Variables */
+        html:not(.dark) {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border-color: #e2e8f0;
+        }
+
+        /* Smooth Transitions */
+        * {
+            transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        /* Backdrop Blur Support */
+        .backdrop-blur-support {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Loading Skeleton */
+        .skeleton {
+            animation: skeleton-loading 1.5s ease-in-out infinite;
+            background: linear-gradient(
+                90deg,
+                rgba(200, 200, 200, 0.2) 25%,
+                rgba(200, 200, 200, 0.4) 50%,
+                rgba(200, 200, 200, 0.2) 75%
+            );
+            background-size: 200% 100%;
+        }
+
+        @keyframes skeleton-loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        .dark .skeleton {
+            background: linear-gradient(
+                90deg,
+                rgba(50, 50, 50, 0.2) 25%,
+                rgba(50, 50, 50, 0.4) 50%,
+                rgba(50, 50, 50, 0.2) 75%
+            );
+            background-size: 200% 100%;
+        }
+
+        /* Page Transitions */
+        @keyframes page-enter {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #app > * {
+            animation: page-enter 0.2s ease-out;
+        }
+
+        /* Hide scrollbar when drawer is open */
+        body.drawer-open {
+            overflow: hidden;
+        }
+
+        /* Mobile Bottom Spacing */
+        @media (max-width: 768px) {
+            #app {
+                padding-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Header Component -->
+    <ecom-header></ecom-header>
+
+    <!-- Mobile Menu Drawer -->
+    <ecom-mobile-menu></ecom-mobile-menu>
+
+    <!-- Main Content Area (SPA Router renders here) -->
+    <main id="app" class="min-h-screen pb-0 md:pb-0">
+        <!-- Pages will be dynamically rendered here -->
+    </main>
+
+    <!-- Footer Component -->
+    <ecom-footer></ecom-footer>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <ecom-bottom-nav></ecom-bottom-nav>
+
+    <!-- Cart Drawer -->
+    <ecom-cart-drawer></ecom-cart-drawer>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Main Application Script (ES6 Module) -->
+    <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

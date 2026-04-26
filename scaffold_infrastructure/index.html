@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CUSTOMIZE: Add your store-specific title and meta tags -->
+    <title>{{STORE_NAME}} - E-commerce Store</title>
+    <meta name="description" content="{{STORE_DESCRIPTION}}">
+    <meta name="theme-color" content="#3b82f6">
+
+    <!-- CUSTOMIZE: Add your Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ⚠️ CRITICAL: Load Tailwind CDN BEFORE config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CUSTOMIZE: Configure Tailwind with your brand colors and fonts -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable dark mode (required)
+            theme: {
+                extend: {
+                    colors: {
+                        // CUSTOMIZE: Add your primary color palette (50-900 shades)
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a'
+                        },
+                        // CUSTOMIZE: Add your accent colors
+                        accent: {
+                            500: '#3b82f6',
+                            600: '#2563eb'
+                        }
+                    },
+                    fontFamily: {
+                        // CUSTOMIZE: Add your chosen Google Fonts
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- OPTIONAL: Add custom CSS variables and styles -->
+    <style>
+        :root {
+            --header-height: 64px;
+        }
+
+        /* Smooth transitions for theme switching */
+        * {
+            transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+
+    <!-- CUSTOMIZE: Add your header component tag -->
+    <custom-header></custom-header>
+
+    <!-- Main Content Area (SPA Router renders here) -->
+    <main id="app" class="min-h-screen">
+        <!-- Pages will be dynamically rendered here by router -->
+    </main>
+
+    <!-- CUSTOMIZE: Add your footer component tag -->
+    <custom-footer></custom-footer>
+
+    <!-- Toast Notifications Container (Required) -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
+
+    <!-- ⚠️ CRITICAL: Load these scripts in this exact order -->
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Main Application Script (ES6 Module) - MUST be last -->
+    <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

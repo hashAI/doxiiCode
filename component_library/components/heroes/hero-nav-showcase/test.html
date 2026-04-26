@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Nav Showcase - Component Test</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Lit -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/lit@3/+esm"></script>
+    
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <h1 class="text-center text-2xl font-bold py-8 bg-gray-100">Hero Nav Showcase Component Tests</h1>
+        
+        <!-- Light Mode - Default -->
+        <section class="mb-16">
+            <h2 class="text-xl font-semibold text-center py-4 bg-gray-50">Light Mode - Fashion Store</h2>
+            <hero-nav-showcase
+                theme="light"
+                logo-text="ShopElite"
+                nav-items='[{"label":"Home","href":"/"},{"label":"Shop","href":"/shop"},{"label":"Collections","href":"/collections"},{"label":"About","href":"/about"}]'
+                cta-primary-text="Start Shopping"
+                cta-secondary-text="Watch Demo"
+                heading="Premium Fashion &<br>Lifestyle Collection"
+                subheading="Discover curated collections of premium clothing, accessories, and lifestyle products. Shop the latest trends with fast, free shipping."
+                hero-image="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80"
+            ></hero-nav-showcase>
+        </section>
+        
+        <!-- Dark Mode - Tech Store -->
+        <section class="mb-16">
+            <h2 class="text-xl font-semibold text-center py-4 bg-gray-50">Dark Mode - Tech Store</h2>
+            <hero-nav-showcase
+                theme="dark"
+                logo-text="TechHub"
+                nav-items='[{"label":"Products","href":"/products"},{"label":"Deals","href":"/deals"},{"label":"Support","href":"/support"},{"label":"Contact","href":"/contact"}]'
+                cta-primary-text="Browse Products"
+                cta-secondary-text="See Demo"
+                nav-cta-text="Get Started"
+                heading="Latest Tech<br>Innovations at Your Fingertips"
+                subheading="Explore cutting-edge technology and electronics. From smartphones to smart homes, find everything you need with expert support."
+                hero-image="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=800&q=80"
+            ></hero-nav-showcase>
+        </section>
+        
+        <!-- Light Mode - Beauty Store -->
+        <section class="mb-16">
+            <h2 class="text-xl font-semibold text-center py-4 bg-gray-50">Light Mode - Beauty Store</h2>
+            <hero-nav-showcase
+                theme="light"
+                logo-text="GlowUp"
+                nav-items='[{"label":"Makeup","href":"/makeup"},{"label":"Skincare","href":"/skincare"},{"label":"Fragrance","href":"/fragrance"},{"label":"Offers","href":"/offers"}]'
+                cta-primary-text="Shop Now"
+                cta-secondary-text="Virtual Try-On"
+                nav-cta-text="Join Now"
+                heading="Beauty Products<br>That Empower You"
+                subheading="Premium cosmetics and skincare from top brands. Discover your perfect look with our curated collections and expert advice."
+                hero-image="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&q=80"
+            ></hero-nav-showcase>
+        </section>
+    </div>
+    
+    <!-- Import Component -->
+    <script type="module" src="./hero-nav-showcase.js"></script>
+    
+    <!-- Event Listeners for Testing -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroes = document.querySelectorAll('hero-nav-showcase');
+            
+            heroes.forEach(hero => {
+                hero.addEventListener('nav-click', (e) => {
+                    console.log('Navigation clicked:', e.detail);
+                });
+                
+                hero.addEventListener('cta-primary-click', (e) => {
+                    console.log('Primary CTA clicked:', e.detail);
+                    alert(`Primary CTA clicked: ${e.detail.action}`);
+                });
+                
+                hero.addEventListener('cta-secondary-click', (e) => {
+                    console.log('Secondary CTA clicked:', e.detail);
+                    alert(`Secondary CTA clicked: ${e.detail.action}`);
+                });
+                
+                hero.addEventListener('nav-cta-click', (e) => {
+                    console.log('Nav CTA clicked:', e.detail);
+                    alert(`Nav CTA clicked: ${e.detail.text}`);
+                });
+                
+                hero.addEventListener('menu-toggle', (e) => {
+                    console.log('Menu toggled:', e.detail);
+                });
+            });
+            
+            // Initialize Lucide icons
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Preview</title>
+    
+    <!-- Tailwind CSS with darkMode configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Import Map for module resolution -->
+    <script type="importmap">
+    {
+        "imports": {
+            "../base-component.js": "http://localhost:8010/api/components/files/base-component.js",
+            "../../assets/state.js": "http://localhost:8010/api/components/assets/state.js",
+            "../../assets/utils.js": "http://localhost:8010/api/components/assets/utils.js",
+            "../../assets/router.js": "http://localhost:8010/api/components/assets/router.js"
+        }
+    }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script type="module">
+        // Mock state and router for preview
+        window.cartStore = window.cartStore || {
+            state: { items: [], count: 0, total: 0 },
+            subscribe: (callback) => {
+                callback(window.cartStore.state);
+                return () => {};
+            },
+            getState: () => window.cartStore.state,
+            getCount: () => 0,
+            addItem: () => {},
+            removeItem: () => {}
+        };
+        
+        window.navigate = window.navigate || ((path) => {
+            console.log('Navigate to:', path);
+        });
+        
+        // Dynamic component loader with new preview.js architecture
+        window.loadComponent = async function(elementTag, filePath) {
+            try {
+                console.log(`Loading component: ${elementTag}`);
+                console.log(`File path: ${filePath}`);
+                
+                // Clear previous content
+                const container = document.getElementById('component-container');
+                container.innerHTML = '<div class="flex items-center justify-center min-h-screen"><div class="text-gray-600">Loading component...</div></div>';
+                
+                // Load preview configuration from the component's preview.js file
+                const previewUrl = `http://localhost:8010/api/components/component/${elementTag}/preview-config`;
+                let previewConfig = null;
+                
+                try {
+                    console.log(`Loading preview config from: ${previewUrl}`);
+                    const previewModule = await import(previewUrl + '?t=' + Date.now()); // Cache bust
+                    previewConfig = previewModule.previewConfig || previewModule.default;
+                    console.log('Preview config loaded:', previewConfig);
+                } catch (error) {
+                    console.warn(`No preview config found for ${elementTag}, using defaults`, error);
+                    previewConfig = { wrapperClass: 'p-8' };
+                }
+                
+                // Apply wrapper class
+                if (previewConfig.wrapperClass) {
+                    container.className = `w-full min-h-screen`;
+                } else {
+                    container.className = 'w-full min-h-screen';
+                }
+                
+                // Clear container
+                container.innerHTML = '';
+                
+                // Load the component module
+                const baseUrl = 'http://localhost:8010/api/components/files/';
+                // Extract path after component_library/components/
+                const componentPath = filePath.replace('component_library/components/', '');
+                const fullUrl = baseUrl + componentPath + '?t=' + Date.now(); // Cache bust
+                
+                console.log(`Loading component from: ${fullUrl}`);
+                
+                const module = await import(fullUrl);
+                console.log('Component module loaded');
+                
+                // Create and append the component
+                const element = document.createElement(elementTag);
+                container.appendChild(element);
+                console.log('Component element created and appended');
+                
+                // Run demo setup if available
+                if (previewConfig.setup) {
+                    console.log('Running preview setup...');
+                    await previewConfig.setup(element);
+                }
+                
+                // Initialize icons after component is added
+                setTimeout(() => {
+                    if (window.lucide) {
+                        lucide.createIcons();
+                    }
+                }, 200);
+                
+                // Post message to parent that component loaded
+                if (window.parent && window.parent !== window) {
+                    window.parent.postMessage({
+                        type: 'component-loaded',
+                        elementTag: elementTag,
+                        previewConfig: {
+                            description: previewConfig.description,
+                            notes: previewConfig.notes
+                        }
+                    }, '*');
+                }
+                
+                console.log('Component loaded successfully');
+            } catch (error) {
+                console.error('Error loading component:', error);
+                console.error('Error stack:', error.stack);
+                const container = document.getElementById('component-container');
+                container.innerHTML = `
+                    <div class="p-8 text-center">
+                        <p class="text-red-600 dark:text-red-400 font-semibold mb-2">Failed to load component</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">${error.message}</p>
+                        <details class="mt-4 text-left text-xs bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-auto">
+                            <summary class="cursor-pointer font-semibold mb-2">Error Details</summary>
+                            <pre>${error.stack}</pre>
+                        </details>
+                    </div>
+                `;
+            }
+        };
+        
+        // Listen for messages from parent
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'load-component') {
+                window.loadComponent(event.data.elementTag, event.data.filePath);
+            }
+        });
+        
+        // Notify parent that preview is ready
+        window.addEventListener('load', () => {
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({ type: 'preview-ready' }, '*');
+            }
+        });
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+        
+        #theme-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #theme-toggle:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors">
+    <!-- Theme Toggle Button -->
+    <button 
+        id="theme-toggle" 
+        class="bg-white/80 dark:bg-gray-800/80 text-gray-800 dark:text-gray-200 hover:bg-white dark:hover:bg-gray-700"
+        aria-label="Toggle theme"
+    >
+        <svg id="theme-icon-light" class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="theme-icon-dark" class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+    
+    <div id="component-container" class="w-full min-h-screen">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="text-center text-gray-400 dark:text-gray-500">
+                <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                </svg>
+                <p class="text-sm">Select a component to preview</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize theme
+        function initTheme() {
+            const savedTheme = localStorage.getItem('preview-theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+        
+        // Toggle theme
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('preview-theme', isDark ? 'dark' : 'light');
+            
+            // Dispatch event for components
+            window.dispatchEvent(new CustomEvent('theme:changed', {
+                detail: { theme: isDark ? 'dark' : 'light' }
+            }));
+        }
+        
+        // Initialize theme on load
+        initTheme();
+        
+        // Initialize icons and AOS
+        window.addEventListener('load', () => {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+            if (window.AOS) {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 100
+                });
+            }
+        });
+        
+        // Theme toggle button
+        document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    </script>
+</body>
+</html>
+

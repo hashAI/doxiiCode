@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery Components - Test</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            padding: 2rem 0;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            padding: 0 1rem;
+        }
+        .section-desc {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.875rem;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+        .dark .section-desc {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950">
+    <!-- Theme Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button 
+            id="theme-toggle"
+            class="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700"
+            aria-label="Toggle theme"
+        >
+            <svg id="sun-icon" class="w-6 h-6 text-gray-900 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <svg id="moon-icon" class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-900 shadow-sm py-8 mb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-4xl font-bold text-center text-gray-900 dark:text-gray-100">Product Gallery Components</h1>
+            <p class="text-center text-gray-600 dark:text-gray-400 mt-2">7 Production-Ready Gallery Components for E-commerce</p>
+        </div>
+    </header>
+
+    <!-- Component 1: Gallery Hover Expand -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">1. Gallery Hover Expand</h2>
+        <p class="section-desc">Hover over images to see them expand smoothly</p>
+        <gallery-hover-expand></gallery-hover-expand>
+    </section>
+
+    <!-- Component 2: Gallery Hover Simple -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">2. Gallery Hover Simple</h2>
+        <p class="section-desc">Simple translate-up hover effect</p>
+        <gallery-hover-simple></gallery-hover-simple>
+    </section>
+
+    <!-- Component 3: Gallery Hover Content -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">3. Gallery Hover Content</h2>
+        <p class="section-desc">Hover to reveal category information</p>
+        <gallery-hover-content></gallery-hover-content>
+    </section>
+
+    <!-- Component 4: Gallery Slider Indicators -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">4. Gallery Slider Indicators</h2>
+        <p class="section-desc">Auto-sliding carousel with dot indicators</p>
+        <gallery-slider-indicators></gallery-slider-indicators>
+    </section>
+
+    <!-- Component 5: Gallery Slider Buttons -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">5. Gallery Slider Buttons</h2>
+        <p class="section-desc">Auto-sliding carousel with navigation buttons</p>
+        <gallery-slider-buttons></gallery-slider-buttons>
+    </section>
+
+    <!-- Component 6: Gallery Grid -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">6. Gallery Grid</h2>
+        <p class="section-desc">Responsive grid layout with hover overlay</p>
+        <gallery-grid></gallery-grid>
+    </section>
+
+    <!-- Component 7: Gallery Marquee Testimonials -->
+    <section>
+        <h2 class="text-gray-900 dark:text-gray-100">7. Gallery Marquee Testimonials</h2>
+        <p class="section-desc">Infinite scrolling testimonials with dual-direction marquee</p>
+        <gallery-marquee-testimonials></gallery-marquee-testimonials>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 py-8 mt-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+                DOXII Component Library • Product Gallery Components v1.1.0
+            </p>
+        </div>
+    </footer>
+
+    <!-- Import Components -->
+    <script type="module">
+        import './gallery-hover-expand/gallery-hover-expand.js';
+        import './gallery-hover-simple/gallery-hover-simple.js';
+        import './gallery-hover-content/gallery-hover-content.js';
+        import './gallery-slider-indicators/gallery-slider-indicators.js';
+        import './gallery-slider-buttons/gallery-slider-buttons.js';
+        import './gallery-grid/gallery-grid.js';
+        import './gallery-marquee-testimonials/gallery-marquee-testimonials.js';
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        });
+
+        // Event listeners for all components
+        document.querySelectorAll('gallery-hover-expand, gallery-hover-simple, gallery-grid').forEach(el => {
+            el.addEventListener('image-click', (e) => {
+                console.log('Image clicked:', e.detail);
+            });
+        });
+
+        document.querySelector('gallery-hover-content')?.addEventListener('item-click', (e) => {
+            console.log('Category clicked:', e.detail);
+        });
+
+        document.querySelectorAll('gallery-slider-indicators, gallery-slider-buttons').forEach(el => {
+            el.addEventListener('slide-change', (e) => {
+                console.log('Slide changed:', e.detail);
+            });
+        });
+
+        document.querySelector('gallery-grid')?.addEventListener('link-click', (e) => {
+            console.log('Show more clicked:', e.detail);
+        });
+
+        // Marquee testimonials events
+        document.querySelector('gallery-marquee-testimonials')?.addEventListener('card-click', (e) => {
+            console.log('Testimonial card clicked:', e.detail);
+        });
+
+        document.querySelector('gallery-marquee-testimonials')?.addEventListener('link-click', (e) => {
+            console.log('Social link clicked:', e.detail);
+        });
+    </script>
+</body>
+</html>
+
